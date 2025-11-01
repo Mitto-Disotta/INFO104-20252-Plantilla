@@ -110,3 +110,29 @@ npm run dev
 ```
 
 Tu API ahora estará activa, lista y autenticada para interactuar con la Google Sheet que configuraste.
+
+## 🧩 5. Variables de Entorno en Vercel
+
+Para los proyectos desplegados en **Vercel**, las variables del archivo `.env` deben configurarse directamente desde el panel de Vercel.
+
+### 🔧 Pasos para configurarlas
+
+1. Entra a tu proyecto en [Vercel Dashboard](https://vercel.com/dashboard).  
+2. Ve a **Settings → Environment Variables**.  
+3. Agrega las siguientes variables una por una:
+
+| Nombre | Valor |
+|---------|--------|
+| `GOOGLE_SHEET_ID` | ID de tu Google Sheet (lo que va entre `/d/` y `/edit`) |
+| `GOOGLE_SHEETS_CLIENT_EMAIL` | Valor del campo `client_email` del archivo JSON |
+| `GOOGLE_SHEETS_PRIVATE_KEY` | Valor del campo `private_key` del archivo JSON **(mantén los saltos de línea `\n` y usa comillas dobles `"`)** |
+
+4. Guarda los cambios después de agregar cada variable.  
+5. Vercel las aplicará automáticamente en tus despliegues.  
+6. Si haces cambios en las variables, **vuelve a desplegar el proyecto** para que se apliquen.
+
+Otra opción es usar el botón de **Import .env**, seleccionar el archivo .env del proyecto y cargarlo.
+
+---
+
+📘 Si el valor de la clave privada lanza errores al pegarla, prueba a reemplazar los saltos de línea reales por `\n` y asegúrate de mantener todo el bloque dentro de comillas dobles `"`.
