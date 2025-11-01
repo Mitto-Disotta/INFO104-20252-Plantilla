@@ -1,5 +1,7 @@
 # Google Sheets API 🚀
 
+Link al video de la ayudantía: https://youtu.be/AdFcRI54We8
+
 Este repo es una plantilla lista para usar que permite levantar una API backend con **Google Spreadsheets** como base de datos persistente.  
 
 Tras configurar todo se podrá ejecutar cualquiera de los proyectos:
